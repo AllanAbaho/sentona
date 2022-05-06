@@ -12350,15 +12350,20 @@ div#carousel ~ span:hover {
   cursor: pointer;
 }
 
-.modalRow1 {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
+/* Changes made by Albert  */
+
+.modal-body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
-.modalColumn1 {
-  flex: 50%;
-  padding: 0 4px;
+
+.modal-body > img {
+  max-width: 100%;
 }
-#modalColumn {
-  width: 300px;
+
+@media only screen and (max-width: 600px) {
+  .modal-body {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
